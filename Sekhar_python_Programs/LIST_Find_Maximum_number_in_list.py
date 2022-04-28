@@ -1,11 +1,13 @@
 # https://www.javatpoint.com/logging-in-python#:~:text=Logging%20is%20a%20Python%20module,when%20they%20work%20to%20logging.
 import logging
-logging.basicConfig(filename='msg.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='msg.log', filemode='w', format='%(name)s - %(levelname)s - %(asctime)s -%(message)s')
 logger= log =logging.getLogger()
-logger.setLevel(logging.ERROR)
+logger.setLevel(logging.DEBUG)
 
 try:
+    log.error("reading a number from the console")
     n = int(input("Enter number of elements in the list: "))
+    log.info("the red number is {}".format(n))
 except  NameError as e:
     print(e)
     print("You should enter an interger value. Rerun the program and enter a number")

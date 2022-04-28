@@ -1,3 +1,6 @@
+# Bubble Sort
+# https://www.geeksforgeeks.org/bubble-sort/
+
 l = [5,44,3,2,11]
 for i in range(len(l) - 1):
     minimum = l[i]
@@ -8,5 +11,5 @@ for i in range(len(l) - 1):
             temp = l[i]
             l[i] = minimum
             l[j] = temp
-        print l
+        print(l)
 print (l)
